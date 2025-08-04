@@ -7,19 +7,19 @@ export default function Home() {
   return (
     <div className="space-y-8">
       <header className="text-center space-y-2">
-        <h1 className="text-4xl font-bold font-headline tracking-tight">Welcome to VulnHub</h1>
+        <h1 className="text-4xl font-bold font-headline tracking-tight">Bienvenido a VulnHub</h1>
         <p className="text-lg text-muted-foreground">
-          A demonstration application for showcasing security vulnerabilities.
+          Una prueba de concepto de Alicorp Labs.
         </p>
       </header>
 
       <Card>
         <CardHeader>
-          <CardTitle>About This Application</CardTitle>
+          <CardTitle>Acerca de esta Aplicación</CardTitle>
         </CardHeader>
         <CardContent>
           <p className="text-muted-foreground">
-            VulnHub is intentionally designed with security flaws to demonstrate the capabilities of security scanning tools like GitHub Advanced Security. Explore the different pages to see examples of hardcoded secrets, vulnerable dependencies, and cross-site scripting (XSS) vulnerabilities.
+            VulnHub es una aplicación de demostración creada por Gerencias de Transición para Alicorp Labs. Está diseñada intencionalmente con fallas de seguridad para demostrar las capacidades de las herramientas de escaneo de seguridad como GitHub Advanced Security. Explore las diferentes páginas para ver ejemplos de secretos hardcodeados, dependencias vulnerables y vulnerabilidades de Cross-Site Scripting (XSS).
           </p>
         </CardContent>
       </Card>
@@ -30,18 +30,18 @@ export default function Home() {
             <div className="flex items-center gap-4">
                <Siren className="w-8 h-8 text-destructive" />
               <div>
-                <CardTitle>Vulnerable Fetch & Secrets</CardTitle>
-                <CardDescription>Dependencies and hardcoded secrets.</CardDescription>
+                <CardTitle>Fetch Vulnerable y Secretos</CardTitle>
+                <CardDescription>Dependencias y secretos hardcodeados.</CardDescription>
               </div>
             </div>
           </CardHeader>
           <CardContent>
             <p className="mb-4 text-muted-foreground">
-              This page fetches data using an outdated library (`axios`) with a known vulnerability. It also contains a hardcoded API key, which would be flagged by secret scanning tools.
+              Esta página obtiene datos utilizando una librería desactualizada (`axios`) con una vulnerabilidad conocida. También contiene una clave de API hardcodeada, que sería detectada por herramientas de escaneo de secretos.
             </p>
             <Button asChild>
               <Link href="/vulnerable-fetch">
-                Visit Page <ArrowRight className="ml-2 h-4 w-4" />
+                Visitar Página <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
           </CardContent>
@@ -53,17 +53,17 @@ export default function Home() {
               <ShieldAlert className="w-8 h-8 text-yellow-500" />
               <div>
                 <CardTitle>Cross-Site Scripting (XSS)</CardTitle>
-                <CardDescription>A common web application flaw.</CardDescription>
+                <CardDescription>Una falla común en aplicaciones web.</CardDescription>
               </div>
             </div>
           </CardHeader>
           <CardContent>
             <p className="mb-4 text-muted-foreground">
-              This page demonstrates a reflected XSS vulnerability. User-provided input from the URL is rendered directly into the page without proper sanitization, allowing for malicious script execution.
+              Esta página demuestra una vulnerabilidad de XSS reflejado. La entrada proporcionada por el usuario desde la URL se representa directamente en la página sin una sanitización adecuada, lo que permite la ejecución de scripts maliciosos.
             </p>
             <Button asChild>
               <Link href="/vulnerable-xss">
-                Visit Page <ArrowRight className="ml-2 h-4 w-4" />
+                Visitar Página <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
           </CardContent>

@@ -23,23 +23,23 @@ export default function VulnerableXssPage() {
 
   return (
     <div className="space-y-6">
-      <h1 className="text-3xl font-bold font-headline">Reflected Cross-Site Scripting (XSS)</h1>
+      <h1 className="text-3xl font-bold font-headline">Cross-Site Scripting (XSS) Reflejado</h1>
       
       <Card>
         <CardHeader>
-          <CardTitle>XSS Demo</CardTitle>
-          <CardDescription>Enter a value below to see it reflected on the page.</CardDescription>
+          <CardTitle>Demostración de XSS</CardTitle>
+          <CardDescription>Ingrese un valor a continuación para verlo reflejado en la página.</CardDescription>
         </CardHeader>
         <CardContent>
           <form onSubmit={handleSubmit} className="flex items-center gap-2 mb-4">
-            <Input name="name" defaultValue={name} placeholder="Enter your name..." className="flex-grow" />
+            <Input name="name" defaultValue={name} placeholder="Ingrese su nombre..." className="flex-grow" />
             <Button type="submit">
-              <Send className="mr-2 h-4 w-4"/> Submit
+              <Send className="mr-2 h-4 w-4"/> Enviar
             </Button>
           </form>
           <div className="p-4 border rounded-md bg-muted">
-            <h3 className="font-semibold mb-2">Rendered Output:</h3>
-            {/* THIS IS THE VULNERABLE PART */}
+            <h3 className="font-semibold mb-2">Salida Renderizada:</h3>
+            {/* ESTA ES LA PARTE VULNERABLE */}
             <div className="text-lg text-primary font-medium" dangerouslySetInnerHTML={{ __html: name }} />
           </div>
         </CardContent>
@@ -47,10 +47,10 @@ export default function VulnerableXssPage() {
 
       <Alert variant="destructive">
         <Terminal className="h-4 w-4" />
-        <AlertTitle>XSS Vulnerability Information</AlertTitle>
+        <AlertTitle>Información sobre la Vulnerabilidad XSS</AlertTitle>
         <AlertDescription>
-          <p>The output above is rendered using `dangerouslySetInnerHTML` with unsanitized user input from the URL. This creates a reflected XSS vulnerability.</p>
-          <p className="mt-2">Try entering the following payload into the input box to see the vulnerability in action:</p>
+          <p>La salida de arriba se renderiza usando `dangerouslySetInnerHTML` con la entrada del usuario desde la URL sin sanitizar. Esto crea una vulnerabilidad de XSS reflejado.</p>
+          <p className="mt-2">Intente ingresar el siguiente payload en el campo de texto para ver la vulnerabilidad en acción:</p>
           <pre className="mt-2 text-xs bg-black/20 p-2 rounded-md">
             <code>{'<img src=x onerror=alert("XSS_SUCCESS!")>'}</code>
           </pre>

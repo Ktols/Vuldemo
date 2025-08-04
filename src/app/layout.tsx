@@ -4,8 +4,8 @@ import { Toaster } from "@/components/ui/toaster"
 import Header from '@/components/header';
 
 export const metadata: Metadata = {
-  title: 'VulnHub',
-  description: 'A demo app to showcase security vulnerabilities.',
+  title: 'VulnHub - PoC Alicorp Labs',
+  description: 'Una prueba de concepto de Alicorp Labs para demostrar vulnerabilidades de seguridad.',
 };
 
 export default function RootLayout({
@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

@@ -10,9 +10,9 @@ export default function Header() {
   const pathname = usePathname();
 
   const navLinks = [
-    { href: '/', label: 'Home' },
-    { href: '/vulnerable-fetch', label: 'Vulnerable Fetch' },
-    { href: '/vulnerable-xss', label: 'XSS Demo' },
+    { href: '/', label: 'Inicio' },
+    { href: '/vulnerable-fetch', label: 'Fetch Vulnerable' },
+    { href: '/vulnerable-xss', label: 'Demo XSS' },
   ];
 
   return (
