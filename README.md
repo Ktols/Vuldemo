@@ -1,6 +1,6 @@
 # Alicorp Labs VulDemo
 
-Esta es una aplicación de prueba de concepto (PoC) desarrollada para **Alicorp Labs** por **Gerencias de Transición**. El propósito de esta aplicación es demostrar vulnerabilidades de seguridad comunes en un entorno controlado y mostrar cómo herramientas como **GitHub Advanced Security** pueden detectarlas y ayudar a mitigarlas.
+Esta es una aplicación de prueba de concepto (PoC) desarrollada para **Alicorp Labs** por **Gerencia de Transición**. El propósito de esta aplicación es demostrar vulnerabilidades de seguridad comunes en un entorno controlado y mostrar cómo herramientas como **GitHub Advanced Security** pueden detectarlas y ayudar a mitigarlas.
 
 ## Visión General
 
