@@ -17,11 +17,11 @@ permissions:
 on:
   workflow_dispatch:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
     tags:
       - '**'
   pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]
   schedule:
     - cron: '05 19 * * 2'
 
