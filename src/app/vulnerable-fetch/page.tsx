@@ -5,7 +5,7 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { KeyRound, Library } from 'lucide-react';
 
 // CLAVE DE API FALSA: Esto está intencionalmente hardcodeado para la demostración de escaneo de secretos.
-const API_KEY = "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0s";
+const API_KEY = "ghp_a1b2c3d4e5f6g7h8i9j0k1l2m3n4o5p6q7r8s9t0";
 
 interface Post {
   userId: number;
