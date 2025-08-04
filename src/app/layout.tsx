@@ -4,7 +4,7 @@ import { Toaster } from "@/components/ui/toaster"
 import Header from '@/components/header';
 
 export const metadata: Metadata = {
-  title: 'VulnHub - PoC Alicorp Labs',
+  title: 'Alicorp Labs VulDemo',
   description: 'Una prueba de concepto de Alicorp Labs para demostrar vulnerabilidades de seguridad.',
 };
 

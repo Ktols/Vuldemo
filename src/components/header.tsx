@@ -1,16 +1,18 @@
 "use client";
 
 import Link from 'next/link';
-import { Bug } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
 import { buttonVariants } from './ui/button';
+import { AlicorpLogo } from './alicorp-logo';
 
 export default function Header() {
   const pathname = usePathname();
 
   const navLinks = [
     { href: '/', label: 'Inicio' },
+    { href: '/login', label: 'Login' },
+    { href: '/register', label: 'Registro' },
     { href: '/vulnerable-fetch', label: 'Fetch Vulnerable' },
     { href: '/vulnerable-xss', label: 'Demo XSS' },
   ];
@@ -20,17 +22,18 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <Bug className="h-6 w-6 text-primary" />
-            <span className="font-bold text-lg font-headline">VulnHub</span>
+            <AlicorpLogo className="h-10" />
+            <span className="font-bold text-lg font-headline hidden sm:inline-block">VulDemo</span>
           </Link>
 
-          <nav className="flex items-center gap-4">
+          <nav className="flex items-center gap-1 sm:gap-2">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  buttonVariants({ variant: 'ghost' }),
+                  buttonVariants({ variant: 'ghost', size: 'sm' }),
+                  'text-xs sm:text-sm',
                   pathname === link.href
                     ? 'bg-accent text-accent-foreground'
                     : 'text-muted-foreground'
